@@ -1,0 +1,10 @@
+disabled_rules:
+  - todo
+  - type_body_length
+  - force_try
+file_length:
+  warning: 800
+  error: 1200
+variable_name:
+  excluded:
+    - _id
