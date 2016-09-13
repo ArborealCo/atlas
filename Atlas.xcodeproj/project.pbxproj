@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1ABB008F58EA0AA1AABE0520 /* Pods_Atlas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0B2BC54DEE45740EC60EDA /* Pods_Atlas.framework */; };
 		780347C71D8364B1005BFDEF /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780347C61D8364B1005BFDEF /* Logging.swift */; };
+		780347C91D836BBE005BFDEF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780347C81D836BBE005BFDEF /* SearchViewController.swift */; };
+		780825791D86F74D00970C68 /* SearchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780825781D86F74D00970C68 /* SearchDataSource.swift */; };
+		7808257B1D86F78800970C68 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808257A1D86F78800970C68 /* SearchResultCell.swift */; };
+		780D78CD1D87535400D435EA /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D78CC1D87535400D435EA /* SearchBar.swift */; };
+		78110AD11D87B3860006D179 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78110AD01D87B3860006D179 /* Colors.swift */; };
 		783B7AE01D811ACB00A2FF72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783B7ADF1D811ACB00A2FF72 /* AppDelegate.swift */; };
 		783B7AE21D811ACB00A2FF72 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783B7AE11D811ACB00A2FF72 /* RootViewController.swift */; };
 		783B7AE41D811ACB00A2FF72 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783B7AE31D811ACB00A2FF72 /* BoardViewController.swift */; };
@@ -17,6 +22,7 @@
 		783B7AEE1D811ACB00A2FF72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 783B7AEC1D811ACB00A2FF72 /* LaunchScreen.storyboard */; };
 		783B7AF91D811ACB00A2FF72 /* AtlasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783B7AF81D811ACB00A2FF72 /* AtlasTests.swift */; };
 		78F7443B1D8123830083C973 /* Pager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7443A1D8123830083C973 /* Pager.swift */; };
+		78F744401D820D7F0083C973 /* BoardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7443F1D820D7F0083C973 /* BoardDataSource.swift */; };
 		E3A9555EB26F35A43830FC50 /* Pods_AtlasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B2006FB343214ADC5A18F6 /* Pods_AtlasTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +42,11 @@
 		305BCE47088334349A5235E9 /* Pods-Atlas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atlas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Atlas/Pods-Atlas.debug.xcconfig"; sourceTree = "<group>"; };
 		3F645CB027AE3512B73C3500 /* Pods-AtlasTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AtlasTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AtlasTests/Pods-AtlasTests.debug.xcconfig"; sourceTree = "<group>"; };
 		780347C61D8364B1005BFDEF /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		780347C81D836BBE005BFDEF /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		780825781D86F74D00970C68 /* SearchDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDataSource.swift; sourceTree = "<group>"; };
+		7808257A1D86F78800970C68 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		780D78CC1D87535400D435EA /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		78110AD01D87B3860006D179 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		783B7ADC1D811ACB00A2FF72 /* Atlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		783B7ADF1D811ACB00A2FF72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		783B7AE11D811ACB00A2FF72 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +60,7 @@
 		783B7AFA1D811ACB00A2FF72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78F7443A1D8123830083C973 /* Pager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pager.swift; sourceTree = "<group>"; };
 		78F7443E1D81B08D0083C973 /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
+		78F7443F1D820D7F0083C973 /* BoardDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardDataSource.swift; sourceTree = "<group>"; };
 		7FCF453DB1CFBA286336DF37 /* Pods-AtlasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AtlasTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AtlasTests/Pods-AtlasTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B0B2BC54DEE45740EC60EDA /* Pods_Atlas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Atlas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,6 +105,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		780347C31D836153005BFDEF /* Board */ = {
+			isa = PBXGroup;
+			children = (
+				78F7443F1D820D7F0083C973 /* BoardDataSource.swift */,
+				783B7AE31D811ACB00A2FF72 /* BoardViewController.swift */,
+			);
+			name = Board;
+			sourceTree = "<group>";
+		};
+		780347CA1D844CFB005BFDEF /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				780347C81D836BBE005BFDEF /* SearchViewController.swift */,
+				780825781D86F74D00970C68 /* SearchDataSource.swift */,
+				7808257A1D86F78800970C68 /* SearchResultCell.swift */,
+				780D78CC1D87535400D435EA /* SearchBar.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
 		783B7AD31D811ACB00A2FF72 = {
 			isa = PBXGroup;
 			children = (
@@ -118,14 +150,16 @@
 			isa = PBXGroup;
 			children = (
 				783B7ADF1D811ACB00A2FF72 /* AppDelegate.swift */,
-				783B7AE11D811ACB00A2FF72 /* RootViewController.swift */,
-				783B7AE31D811ACB00A2FF72 /* BoardViewController.swift */,
-				78F7443A1D8123830083C973 /* Pager.swift */,
-				783B7AE71D811ACB00A2FF72 /* Main.storyboard */,
 				783B7AEA1D811ACB00A2FF72 /* Assets.xcassets */,
-				783B7AEC1D811ACB00A2FF72 /* LaunchScreen.storyboard */,
+				780347C31D836153005BFDEF /* Board */,
+				780347CA1D844CFB005BFDEF /* Search */,
 				783B7AEF1D811ACB00A2FF72 /* Info.plist */,
+				783B7AEC1D811ACB00A2FF72 /* LaunchScreen.storyboard */,
 				780347C61D8364B1005BFDEF /* Logging.swift */,
+				783B7AE71D811ACB00A2FF72 /* Main.storyboard */,
+				78F7443A1D8123830083C973 /* Pager.swift */,
+				783B7AE11D811ACB00A2FF72 /* RootViewController.swift */,
+				78110AD01D87B3860006D179 /* Colors.swift */,
 			);
 			path = Atlas;
 			sourceTree = "<group>";
@@ -371,10 +405,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				783B7AE21D811ACB00A2FF72 /* RootViewController.swift in Sources */,
+				78110AD11D87B3860006D179 /* Colors.swift in Sources */,
+				780347C91D836BBE005BFDEF /* SearchViewController.swift in Sources */,
 				780347C71D8364B1005BFDEF /* Logging.swift in Sources */,
+				780D78CD1D87535400D435EA /* SearchBar.swift in Sources */,
 				78F7443B1D8123830083C973 /* Pager.swift in Sources */,
+				7808257B1D86F78800970C68 /* SearchResultCell.swift in Sources */,
 				783B7AE41D811ACB00A2FF72 /* BoardViewController.swift in Sources */,
+				780825791D86F74D00970C68 /* SearchDataSource.swift in Sources */,
 				783B7AE01D811ACB00A2FF72 /* AppDelegate.swift in Sources */,
+				78F744401D820D7F0083C973 /* BoardDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

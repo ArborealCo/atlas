@@ -6,4 +6,21 @@
 //  Copyright © 2016 Arboreal, LLC. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class BoardDataSource: NSObject, UICollectionViewDataSource {
+
+    // swiftlint:disable:next line_length
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 100
+    }
+
+    // swiftlint:disable:next line_length
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
+            "BoardItemCellIdentifier",
+            forIndexPath: indexPath)
+        return cell
+    }
+
+}
