@@ -1,6 +1,8 @@
 # v0.1.0 - Search
 - Search.
 - Add items to your board.
+- Fabric.
+- TestFlight.
 
 # v0.2.0 - 🔥
 - Show trending artists / albums / songs. Heavy dependency on atlas-api.

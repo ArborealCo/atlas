@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1ABB008F58EA0AA1AABE0520 /* Pods_Atlas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0B2BC54DEE45740EC60EDA /* Pods_Atlas.framework */; };
+		380F4A9A3DCBD296F27D66C1 /* Pods_AtlasTests_Integration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF05487D22607577864C2C9C /* Pods_AtlasTests_Integration.framework */; };
 		780347C71D8364B1005BFDEF /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780347C61D8364B1005BFDEF /* Logging.swift */; };
 		780347C91D836BBE005BFDEF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780347C81D836BBE005BFDEF /* SearchViewController.swift */; };
-		780825791D86F74D00970C68 /* SearchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780825781D86F74D00970C68 /* SearchDataSource.swift */; };
 		7808257B1D86F78800970C68 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808257A1D86F78800970C68 /* SearchResultCell.swift */; };
 		780D78CD1D87535400D435EA /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D78CC1D87535400D435EA /* SearchBar.swift */; };
 		78110AD11D87B3860006D179 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78110AD01D87B3860006D179 /* Colors.swift */; };
@@ -21,6 +21,13 @@
 		783B7AEB1D811ACB00A2FF72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783B7AEA1D811ACB00A2FF72 /* Assets.xcassets */; };
 		783B7AEE1D811ACB00A2FF72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 783B7AEC1D811ACB00A2FF72 /* LaunchScreen.storyboard */; };
 		783B7AF91D811ACB00A2FF72 /* AtlasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783B7AF81D811ACB00A2FF72 /* AtlasTests.swift */; };
+		7844B8791D92D54E0090DEC6 /* ArtistSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7844B8781D92D54E0090DEC6 /* ArtistSearch.swift */; };
+		7844B87C1D92D78A0090DEC6 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7844B87B1D92D78A0090DEC6 /* Artist.swift */; };
+		785595B61D8E4DCA0088EBB3 /* SearchServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785595B51D8E4DCA0088EBB3 /* SearchServiceSpec.swift */; };
+		785595B91D8E4E6B0088EBB3 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785595B81D8E4E6B0088EBB3 /* SearchService.swift */; };
+		786009501D95DE7E002B8259 /* SearchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860094F1D95DE7E002B8259 /* SearchDataSource.swift */; };
+		786009521D95EC0C002B8259 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786009511D95EC0C002B8259 /* Notifications.swift */; };
+		78CBA00A1D95CF0900D37AA2 /* SearchResultPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CBA0091D95CF0900D37AA2 /* SearchResultPresentable.swift */; };
 		78F7443B1D8123830083C973 /* Pager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7443A1D8123830083C973 /* Pager.swift */; };
 		78F744401D820D7F0083C973 /* BoardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7443F1D820D7F0083C973 /* BoardDataSource.swift */; };
 		E3A9555EB26F35A43830FC50 /* Pods_AtlasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B2006FB343214ADC5A18F6 /* Pods_AtlasTests.framework */; };
@@ -34,16 +41,23 @@
 			remoteGlobalIDString = 783B7ADB1D811ACB00A2FF72;
 			remoteInfo = Atlas;
 		};
+		785595AE1D8E4D780088EBB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 783B7AD41D811ACB00A2FF72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 783B7ADB1D811ACB00A2FF72;
+			remoteInfo = Atlas;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		02B2006FB343214ADC5A18F6 /* Pods_AtlasTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AtlasTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21EBB8549FA73FE44AFEC096 /* Pods-AtlasTests-Integration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AtlasTests-Integration.release.xcconfig"; path = "Pods/Target Support Files/Pods-AtlasTests-Integration/Pods-AtlasTests-Integration.release.xcconfig"; sourceTree = "<group>"; };
 		2D16928040EACADE5D290165 /* Pods-Atlas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atlas.release.xcconfig"; path = "Pods/Target Support Files/Pods-Atlas/Pods-Atlas.release.xcconfig"; sourceTree = "<group>"; };
 		305BCE47088334349A5235E9 /* Pods-Atlas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atlas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Atlas/Pods-Atlas.debug.xcconfig"; sourceTree = "<group>"; };
 		3F645CB027AE3512B73C3500 /* Pods-AtlasTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AtlasTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AtlasTests/Pods-AtlasTests.debug.xcconfig"; sourceTree = "<group>"; };
 		780347C61D8364B1005BFDEF /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		780347C81D836BBE005BFDEF /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		780825781D86F74D00970C68 /* SearchDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDataSource.swift; sourceTree = "<group>"; };
 		7808257A1D86F78800970C68 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		780D78CC1D87535400D435EA /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		78110AD01D87B3860006D179 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -58,11 +72,22 @@
 		783B7AF41D811ACB00A2FF72 /* AtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		783B7AF81D811ACB00A2FF72 /* AtlasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasTests.swift; sourceTree = "<group>"; };
 		783B7AFA1D811ACB00A2FF72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7844B8781D92D54E0090DEC6 /* ArtistSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistSearch.swift; sourceTree = "<group>"; };
+		7844B87B1D92D78A0090DEC6 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		785595A91D8E4D780088EBB3 /* AtlasTests-Integration.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AtlasTests-Integration.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		785595AD1D8E4D780088EBB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		785595B51D8E4DCA0088EBB3 /* SearchServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchServiceSpec.swift; sourceTree = "<group>"; };
+		785595B81D8E4E6B0088EBB3 /* SearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		7860094F1D95DE7E002B8259 /* SearchDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDataSource.swift; sourceTree = "<group>"; };
+		786009511D95EC0C002B8259 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		78CBA0091D95CF0900D37AA2 /* SearchResultPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultPresentable.swift; sourceTree = "<group>"; };
 		78F7443A1D8123830083C973 /* Pager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pager.swift; sourceTree = "<group>"; };
 		78F7443E1D81B08D0083C973 /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
 		78F7443F1D820D7F0083C973 /* BoardDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardDataSource.swift; sourceTree = "<group>"; };
 		7FCF453DB1CFBA286336DF37 /* Pods-AtlasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AtlasTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AtlasTests/Pods-AtlasTests.release.xcconfig"; sourceTree = "<group>"; };
+		86F924D185DC0E1355B0A0BF /* Pods-AtlasTests-Integration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AtlasTests-Integration.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AtlasTests-Integration/Pods-AtlasTests-Integration.debug.xcconfig"; sourceTree = "<group>"; };
 		9B0B2BC54DEE45740EC60EDA /* Pods_Atlas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Atlas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF05487D22607577864C2C9C /* Pods_AtlasTests_Integration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AtlasTests_Integration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +107,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		785595A61D8E4D780088EBB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				380F4A9A3DCBD296F27D66C1 /* Pods_AtlasTests_Integration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -92,6 +125,8 @@
 				2D16928040EACADE5D290165 /* Pods-Atlas.release.xcconfig */,
 				3F645CB027AE3512B73C3500 /* Pods-AtlasTests.debug.xcconfig */,
 				7FCF453DB1CFBA286336DF37 /* Pods-AtlasTests.release.xcconfig */,
+				86F924D185DC0E1355B0A0BF /* Pods-AtlasTests-Integration.debug.xcconfig */,
+				21EBB8549FA73FE44AFEC096 /* Pods-AtlasTests-Integration.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -101,6 +136,7 @@
 			children = (
 				9B0B2BC54DEE45740EC60EDA /* Pods_Atlas.framework */,
 				02B2006FB343214ADC5A18F6 /* Pods_AtlasTests.framework */,
+				CF05487D22607577864C2C9C /* Pods_AtlasTests_Integration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,12 +153,20 @@
 		780347CA1D844CFB005BFDEF /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				7860094F1D95DE7E002B8259 /* SearchDataSource.swift */,
 				780347C81D836BBE005BFDEF /* SearchViewController.swift */,
-				780825781D86F74D00970C68 /* SearchDataSource.swift */,
 				7808257A1D86F78800970C68 /* SearchResultCell.swift */,
 				780D78CC1D87535400D435EA /* SearchBar.swift */,
 			);
 			name = Search;
+			sourceTree = "<group>";
+		};
+		7811E5461D88C56800A99DB9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				785595B71D8E4E500088EBB3 /* Services */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		783B7AD31D811ACB00A2FF72 = {
@@ -130,6 +174,7 @@
 			children = (
 				783B7ADE1D811ACB00A2FF72 /* Atlas */,
 				783B7AF71D811ACB00A2FF72 /* AtlasTests */,
+				785595AA1D8E4D780088EBB3 /* AtlasTests-Integration */,
 				78F7443E1D81B08D0083C973 /* Scripts */,
 				783B7ADD1D811ACB00A2FF72 /* Products */,
 				07B9E5751325A52101C0420B /* Pods */,
@@ -142,6 +187,7 @@
 			children = (
 				783B7ADC1D811ACB00A2FF72 /* Atlas.app */,
 				783B7AF41D811ACB00A2FF72 /* AtlasTests.xctest */,
+				785595A91D8E4D780088EBB3 /* AtlasTests-Integration.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,10 +195,12 @@
 		783B7ADE1D811ACB00A2FF72 /* Atlas */ = {
 			isa = PBXGroup;
 			children = (
-				783B7ADF1D811ACB00A2FF72 /* AppDelegate.swift */,
 				783B7AEA1D811ACB00A2FF72 /* Assets.xcassets */,
 				780347C31D836153005BFDEF /* Board */,
+				7811E5461D88C56800A99DB9 /* Networking */,
+				7849ACC71D91B7D4008B506C /* Models */,
 				780347CA1D844CFB005BFDEF /* Search */,
+				783B7ADF1D811ACB00A2FF72 /* AppDelegate.swift */,
 				783B7AEF1D811ACB00A2FF72 /* Info.plist */,
 				783B7AEC1D811ACB00A2FF72 /* LaunchScreen.storyboard */,
 				780347C61D8364B1005BFDEF /* Logging.swift */,
@@ -160,6 +208,7 @@
 				78F7443A1D8123830083C973 /* Pager.swift */,
 				783B7AE11D811ACB00A2FF72 /* RootViewController.swift */,
 				78110AD01D87B3860006D179 /* Colors.swift */,
+				786009511D95EC0C002B8259 /* Notifications.swift */,
 			);
 			path = Atlas;
 			sourceTree = "<group>";
@@ -171,6 +220,65 @@
 				783B7AFA1D811ACB00A2FF72 /* Info.plist */,
 			);
 			path = AtlasTests;
+			sourceTree = "<group>";
+		};
+		7844B8771D92D5340090DEC6 /* iTunes Search */ = {
+			isa = PBXGroup;
+			children = (
+				7844B8781D92D54E0090DEC6 /* ArtistSearch.swift */,
+			);
+			path = "iTunes Search";
+			sourceTree = "<group>";
+		};
+		7844B87A1D92D77A0090DEC6 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				7844B87B1D92D78A0090DEC6 /* Artist.swift */,
+				78CBA0091D95CF0900D37AA2 /* SearchResultPresentable.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		7849ACC71D91B7D4008B506C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7844B87A1D92D77A0090DEC6 /* Realm */,
+				7844B8771D92D5340090DEC6 /* iTunes Search */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		785595AA1D8E4D780088EBB3 /* AtlasTests-Integration */ = {
+			isa = PBXGroup;
+			children = (
+				785595B31D8E4DA20088EBB3 /* Networking */,
+				785595AD1D8E4D780088EBB3 /* Info.plist */,
+			);
+			path = "AtlasTests-Integration";
+			sourceTree = "<group>";
+		};
+		785595B31D8E4DA20088EBB3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				785595B41D8E4DAF0088EBB3 /* Services */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		785595B41D8E4DAF0088EBB3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				785595B51D8E4DCA0088EBB3 /* SearchServiceSpec.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		785595B71D8E4E500088EBB3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				785595B81D8E4E6B0088EBB3 /* SearchService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +327,27 @@
 			productReference = 783B7AF41D811ACB00A2FF72 /* AtlasTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		785595A81D8E4D780088EBB3 /* AtlasTests-Integration */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 785595B01D8E4D780088EBB3 /* Build configuration list for PBXNativeTarget "AtlasTests-Integration" */;
+			buildPhases = (
+				51A4D32C0E725395B8DFE2F6 /* [CP] Check Pods Manifest.lock */,
+				785595A51D8E4D780088EBB3 /* Sources */,
+				785595A61D8E4D780088EBB3 /* Frameworks */,
+				785595A71D8E4D780088EBB3 /* Resources */,
+				C54BB2C4D06F38C31B83DA46 /* [CP] Embed Pods Frameworks */,
+				872C4B8E17134FDDD04323EB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				785595AF1D8E4D780088EBB3 /* PBXTargetDependency */,
+			);
+			name = "AtlasTests-Integration";
+			productName = "AtlasTests-Integration";
+			productReference = 785595A91D8E4D780088EBB3 /* AtlasTests-Integration.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -234,6 +363,10 @@
 						DevelopmentTeam = N4E7457U38;
 					};
 					783B7AF31D811ACB00A2FF72 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 783B7ADB1D811ACB00A2FF72;
+					};
+					785595A81D8E4D780088EBB3 = {
 						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = 783B7ADB1D811ACB00A2FF72;
 					};
@@ -254,6 +387,7 @@
 			targets = (
 				783B7ADB1D811ACB00A2FF72 /* Atlas */,
 				783B7AF31D811ACB00A2FF72 /* AtlasTests */,
+				785595A81D8E4D780088EBB3 /* AtlasTests-Integration */,
 			);
 		};
 /* End PBXProject section */
@@ -270,6 +404,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		783B7AF21D811ACB00A2FF72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		785595A71D8E4D780088EBB3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -295,6 +436,21 @@
 			showEnvVarsInLog = 0;
 		};
 		484390B7E25328D80E5112CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		51A4D32C0E725395B8DFE2F6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -337,6 +493,21 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Scripts/swiftlint.sh\"";
 		};
+		872C4B8E17134FDDD04323EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AtlasTests-Integration/Pods-AtlasTests-Integration-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9645A4789BC8BABA4B01D9C5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,6 +521,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C54BB2C4D06F38C31B83DA46 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AtlasTests-Integration/Pods-AtlasTests-Integration-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C7DF669A834DD1F3BB2631F4 /* [CP] Embed Pods Frameworks */ = {
@@ -406,13 +592,18 @@
 			files = (
 				783B7AE21D811ACB00A2FF72 /* RootViewController.swift in Sources */,
 				78110AD11D87B3860006D179 /* Colors.swift in Sources */,
+				78CBA00A1D95CF0900D37AA2 /* SearchResultPresentable.swift in Sources */,
 				780347C91D836BBE005BFDEF /* SearchViewController.swift in Sources */,
 				780347C71D8364B1005BFDEF /* Logging.swift in Sources */,
 				780D78CD1D87535400D435EA /* SearchBar.swift in Sources */,
+				786009501D95DE7E002B8259 /* SearchDataSource.swift in Sources */,
 				78F7443B1D8123830083C973 /* Pager.swift in Sources */,
+				786009521D95EC0C002B8259 /* Notifications.swift in Sources */,
+				7844B87C1D92D78A0090DEC6 /* Artist.swift in Sources */,
 				7808257B1D86F78800970C68 /* SearchResultCell.swift in Sources */,
+				785595B91D8E4E6B0088EBB3 /* SearchService.swift in Sources */,
 				783B7AE41D811ACB00A2FF72 /* BoardViewController.swift in Sources */,
-				780825791D86F74D00970C68 /* SearchDataSource.swift in Sources */,
+				7844B8791D92D54E0090DEC6 /* ArtistSearch.swift in Sources */,
 				783B7AE01D811ACB00A2FF72 /* AppDelegate.swift in Sources */,
 				78F744401D820D7F0083C973 /* BoardDataSource.swift in Sources */,
 			);
@@ -426,6 +617,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		785595A51D8E4D780088EBB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				785595B61D8E4DCA0088EBB3 /* SearchServiceSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -433,6 +632,11 @@
 			isa = PBXTargetDependency;
 			target = 783B7ADB1D811ACB00A2FF72 /* Atlas */;
 			targetProxy = 783B7AF51D811ACB00A2FF72 /* PBXContainerItemProxy */;
+		};
+		785595AF1D8E4D780088EBB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 783B7ADB1D811ACB00A2FF72 /* Atlas */;
+			targetProxy = 785595AE1D8E4D780088EBB3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -593,6 +797,35 @@
 			};
 			name = Release;
 		};
+		785595B11D8E4D780088EBB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86F924D185DC0E1355B0A0BF /* Pods-AtlasTests-Integration.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "AtlasTests-Integration/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.arboreal.AtlasTests-Integration";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Atlas.app/Atlas";
+			};
+			name = Debug;
+		};
+		785595B21D8E4D780088EBB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21EBB8549FA73FE44AFEC096 /* Pods-AtlasTests-Integration.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "AtlasTests-Integration/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.arboreal.AtlasTests-Integration";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Atlas.app/Atlas";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -619,6 +852,15 @@
 			buildConfigurations = (
 				783B7B011D811ACB00A2FF72 /* Debug */,
 				783B7B021D811ACB00A2FF72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		785595B01D8E4D780088EBB3 /* Build configuration list for PBXNativeTarget "AtlasTests-Integration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785595B11D8E4D780088EBB3 /* Debug */,
+				785595B21D8E4D780088EBB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

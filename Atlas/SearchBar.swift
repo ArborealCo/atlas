@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum SearchType {
+    case Artists
+    case Albums
+    case Songs
+}
+
 class SearchBar: UIViewController {
 
     @IBOutlet weak var searchTextField: UITextField!
@@ -15,16 +21,14 @@ class SearchBar: UIViewController {
     @IBOutlet weak var albumsFilterButton: UIButton!
     @IBOutlet weak var songsFilterButton: UIButton!
 
-    enum SearchType {
-        case Artists
-        case Albums
-        case Songs
-    }
+    let searchDataSource = SearchDataSource()
 
-    var currentSearchType: SearchType! {
+    var currentSearchType: SearchType? {
         didSet {
             if currentSearchType != oldValue {
                 updateViewForCurrentSearchType()
+                searchDataSource.currentSearchType = currentSearchType
+                searchDataSource.whenUpdated?()
             }
         }
     }
@@ -73,6 +77,20 @@ private extension SearchBar {
         } else {
             songsFilterButton.setTitleColor(UIColor.atlasGray(), forState: .Normal)
         }
+    }
+
+    @IBAction func searchTextFieldChanged(sender: UITextField) {
+        guard let term = sender.text where term.characters.count > 2 else {
+            return
+        }
+
+        guard let type = currentSearchType else {
+            log.debug("No search type set.")
+            return
+        }
+
+        log.debug()
+        searchDataSource.search(term, type: type)
     }
 
 }

@@ -7,11 +7,94 @@
 //
 
 import UIKit
+import Moya
+import RxSwift
+import ObjectMapper
 
-class SearchDataSource: NSObject, UITableViewDataSource {
+class SearchDataSource: NSObject {
+
+    var presentableSearchResults: [SearchResultPresentable] {
+        guard let searchType = currentSearchType else {
+            return []
+        }
+
+        switch searchType {
+        case .Artists:
+            return artistSearchResults ?? []
+        case .Albums:
+            return []
+        case .Songs:
+            return []
+        }
+    }
+
+    var whenUpdated: (() -> Void)?
+
+    private let searchService = RxMoyaProvider<SearchService>()
+    private let disposeBag = DisposeBag()
+
+    var currentSearchType: SearchType?
+    private var artistSearchResults: [Artist]?
+
+    func search(term: String, type: SearchType) {
+        currentSearchType = type
+
+        switch type {
+        case .Artists:
+            searchForArtist(term)
+        case .Albums:
+            break // TODO
+        case.Songs:
+            break // TODO
+        }
+    }
+
+}
+
+// MARK: Private
+private extension SearchDataSource {
+
+    func searchForArtist(term: String) {
+        searchService.request(.SearchArtists(term: term))
+            .filterSuccessfulStatusCodes()
+            .mapJSON()
+            .doOnNext { json in
+                guard let jsonDict = json as? [String: AnyObject] else {
+                    return
+                }
+
+                let artistsJSON = jsonDict["results"]
+
+                if let artists = Mapper<Artist>().mapArray(artistsJSON) {
+                    self.artistSearchResults = artists
+                    self.whenUpdated?()
+                } else {
+                    log.error("Failed to map artist JSON")
+                }
+            }
+            .subscribe()
+            .addDisposableTo(disposeBag)
+    }
+
+}
+
+// MARK: UITableVIewDataSource
+extension SearchDataSource: UITableViewDataSource {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        guard let searchType = currentSearchType else {
+            log.debug("No search type set.")
+            return 0
+        }
+
+        switch searchType {
+        case .Artists:
+            return artistSearchResults?.count ?? 0
+        case .Albums:
+            return 0
+        case .Songs:
+            return 0
+        }
     }
 
     // swiftlint:disable:next line_length
