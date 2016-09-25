@@ -24,7 +24,7 @@ class SearchDataSource: NSObject {
         case .Albums:
             return albumSearchResults ?? []
         case .Songs:
-            return []
+            return songSearchResults ?? []
         }
     }
 
@@ -36,6 +36,7 @@ class SearchDataSource: NSObject {
     var currentSearchType: SearchType?
     private var artistSearchResults: [Artist]?
     private var albumSearchResults: [Album]?
+    private var songSearchResults: [Song]?
 
     func search(term: String, type: SearchType) {
         currentSearchType = type
@@ -46,7 +47,7 @@ class SearchDataSource: NSObject {
         case .Albums:
             searchForAlbum(term)
         case.Songs:
-            break // TODO
+            searchForSong(term)
         }
     }
 
@@ -99,6 +100,28 @@ private extension SearchDataSource {
             .addDisposableTo(disposeBag)
     }
 
+    func searchForSong(term: String) {
+        searchService.request(.SearchSongs(term: term))
+            .filterSuccessfulStatusCodes()
+            .mapJSON()
+            .doOnNext { json in
+                guard let jsonDict = json as? [String: AnyObject] else {
+                    return
+                }
+
+                let songsJSON = jsonDict["results"]
+
+                if let songs = Mapper<Song>().mapArray(songsJSON) {
+                    self.songSearchResults = songs
+                    self.whenUpdated?()
+                } else {
+                    log.error("Failed to map songs JSON")
+                }
+            }
+            .subscribe()
+            .addDisposableTo(disposeBag)
+    }
+
 }
 
 // MARK: UITableVIewDataSource
@@ -116,7 +139,7 @@ extension SearchDataSource: UITableViewDataSource {
         case .Albums:
             return albumSearchResults?.count ?? 0
         case .Songs:
-            return 0
+            return songSearchResults?.count ?? 0
         }
     }
 
