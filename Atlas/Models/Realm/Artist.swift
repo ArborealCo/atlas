@@ -9,20 +9,28 @@
 import RealmSwift
 import ObjectMapper
 
-class Artist: Object, Mappable {
+class Artist: Object, Mappable, Identifiable {
 
-    dynamic var name: String = ""
-    dynamic var iTunesURL: String = ""
+    dynamic var id: String = ""
+
     dynamic var genre: String = ""
+    dynamic var iTunesURL: String = ""
+    dynamic var name: String = ""
+
+    override class func primaryKey() -> String? {
+        return "id"
+    }
 
     required convenience init?(_ map: Map) {
         self.init()
     }
 
     func mapping(map: Map) {
-        name <- map["artistName"]
-        iTunesURL <- map["artistLinkUrl"]
+        id <- map["artistId"]
+
         genre <- map["primaryGenreName"]
+        iTunesURL <- map["artistLinkUrl"]
+        name <- map["artistName"]
     }
 
 }

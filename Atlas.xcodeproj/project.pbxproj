@@ -14,6 +14,10 @@
 		7808257B1D86F78800970C68 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808257A1D86F78800970C68 /* SearchResultCell.swift */; };
 		780D78CD1D87535400D435EA /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D78CC1D87535400D435EA /* SearchBar.swift */; };
 		78110AD11D87B3860006D179 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78110AD01D87B3860006D179 /* Colors.swift */; };
+		7813683A1D963A8700FB6F21 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781368391D963A8700FB6F21 /* Album.swift */; };
+		7813683C1D97949F00FB6F21 /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7813683B1D97949F00FB6F21 /* Dates.swift */; };
+		7813683F1D97965700FB6F21 /* LookupTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7813683E1D97965700FB6F21 /* LookupTransform.swift */; };
+		781368411D9797EA00FB6F21 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781368401D9797EA00FB6F21 /* Identifiable.swift */; };
 		783B7AE01D811ACB00A2FF72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783B7ADF1D811ACB00A2FF72 /* AppDelegate.swift */; };
 		783B7AE21D811ACB00A2FF72 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783B7AE11D811ACB00A2FF72 /* RootViewController.swift */; };
 		783B7AE41D811ACB00A2FF72 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783B7AE31D811ACB00A2FF72 /* BoardViewController.swift */; };
@@ -21,7 +25,6 @@
 		783B7AEB1D811ACB00A2FF72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783B7AEA1D811ACB00A2FF72 /* Assets.xcassets */; };
 		783B7AEE1D811ACB00A2FF72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 783B7AEC1D811ACB00A2FF72 /* LaunchScreen.storyboard */; };
 		783B7AF91D811ACB00A2FF72 /* AtlasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783B7AF81D811ACB00A2FF72 /* AtlasTests.swift */; };
-		7844B8791D92D54E0090DEC6 /* ArtistSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7844B8781D92D54E0090DEC6 /* ArtistSearch.swift */; };
 		7844B87C1D92D78A0090DEC6 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7844B87B1D92D78A0090DEC6 /* Artist.swift */; };
 		785595B61D8E4DCA0088EBB3 /* SearchServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785595B51D8E4DCA0088EBB3 /* SearchServiceSpec.swift */; };
 		785595B91D8E4E6B0088EBB3 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785595B81D8E4E6B0088EBB3 /* SearchService.swift */; };
@@ -61,6 +64,10 @@
 		7808257A1D86F78800970C68 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		780D78CC1D87535400D435EA /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		78110AD01D87B3860006D179 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		781368391D963A8700FB6F21 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		7813683B1D97949F00FB6F21 /* Dates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
+		7813683E1D97965700FB6F21 /* LookupTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupTransform.swift; sourceTree = "<group>"; };
+		781368401D9797EA00FB6F21 /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		783B7ADC1D811ACB00A2FF72 /* Atlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		783B7ADF1D811ACB00A2FF72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		783B7AE11D811ACB00A2FF72 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +79,6 @@
 		783B7AF41D811ACB00A2FF72 /* AtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		783B7AF81D811ACB00A2FF72 /* AtlasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasTests.swift; sourceTree = "<group>"; };
 		783B7AFA1D811ACB00A2FF72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7844B8781D92D54E0090DEC6 /* ArtistSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistSearch.swift; sourceTree = "<group>"; };
 		7844B87B1D92D78A0090DEC6 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		785595A91D8E4D780088EBB3 /* AtlasTests-Integration.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AtlasTests-Integration.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		785595AD1D8E4D780088EBB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -169,6 +175,14 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		7813683D1D97962C00FB6F21 /* Transformation */ = {
+			isa = PBXGroup;
+			children = (
+				7813683E1D97965700FB6F21 /* LookupTransform.swift */,
+			);
+			path = Transformation;
+			sourceTree = "<group>";
+		};
 		783B7AD31D811ACB00A2FF72 = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +223,7 @@
 				783B7AE11D811ACB00A2FF72 /* RootViewController.swift */,
 				78110AD01D87B3860006D179 /* Colors.swift */,
 				786009511D95EC0C002B8259 /* Notifications.swift */,
+				7813683B1D97949F00FB6F21 /* Dates.swift */,
 			);
 			path = Atlas;
 			sourceTree = "<group>";
@@ -222,18 +237,12 @@
 			path = AtlasTests;
 			sourceTree = "<group>";
 		};
-		7844B8771D92D5340090DEC6 /* iTunes Search */ = {
-			isa = PBXGroup;
-			children = (
-				7844B8781D92D54E0090DEC6 /* ArtistSearch.swift */,
-			);
-			path = "iTunes Search";
-			sourceTree = "<group>";
-		};
 		7844B87A1D92D77A0090DEC6 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				781368391D963A8700FB6F21 /* Album.swift */,
 				7844B87B1D92D78A0090DEC6 /* Artist.swift */,
+				781368401D9797EA00FB6F21 /* Identifiable.swift */,
 				78CBA0091D95CF0900D37AA2 /* SearchResultPresentable.swift */,
 			);
 			path = Realm;
@@ -242,8 +251,8 @@
 		7849ACC71D91B7D4008B506C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7813683D1D97962C00FB6F21 /* Transformation */,
 				7844B87A1D92D77A0090DEC6 /* Realm */,
-				7844B8771D92D5340090DEC6 /* iTunes Search */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -591,8 +600,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				783B7AE21D811ACB00A2FF72 /* RootViewController.swift in Sources */,
+				7813683F1D97965700FB6F21 /* LookupTransform.swift in Sources */,
 				78110AD11D87B3860006D179 /* Colors.swift in Sources */,
 				78CBA00A1D95CF0900D37AA2 /* SearchResultPresentable.swift in Sources */,
+				7813683A1D963A8700FB6F21 /* Album.swift in Sources */,
 				780347C91D836BBE005BFDEF /* SearchViewController.swift in Sources */,
 				780347C71D8364B1005BFDEF /* Logging.swift in Sources */,
 				780D78CD1D87535400D435EA /* SearchBar.swift in Sources */,
@@ -601,9 +612,10 @@
 				786009521D95EC0C002B8259 /* Notifications.swift in Sources */,
 				7844B87C1D92D78A0090DEC6 /* Artist.swift in Sources */,
 				7808257B1D86F78800970C68 /* SearchResultCell.swift in Sources */,
+				781368411D9797EA00FB6F21 /* Identifiable.swift in Sources */,
 				785595B91D8E4E6B0088EBB3 /* SearchService.swift in Sources */,
 				783B7AE41D811ACB00A2FF72 /* BoardViewController.swift in Sources */,
-				7844B8791D92D54E0090DEC6 /* ArtistSearch.swift in Sources */,
+				7813683C1D97949F00FB6F21 /* Dates.swift in Sources */,
 				783B7AE01D811ACB00A2FF72 /* AppDelegate.swift in Sources */,
 				78F744401D820D7F0083C973 /* BoardDataSource.swift in Sources */,
 			);

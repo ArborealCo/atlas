@@ -70,7 +70,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XLS-09-fva">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XLS-09-fva">
                                                                 <rect key="frame" x="15" y="15" width="70" height="70"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="XLS-09-fva" secondAttribute="height" multiplier="1:1" id="U7Y-jl-9mS"/>

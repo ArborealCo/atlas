@@ -45,14 +45,17 @@ class SearchBar: UIViewController {
 
     @IBAction func artistsButtonTapped() {
         currentSearchType = .Artists
+        search(searchTextField)
     }
 
     @IBAction func albumsButtonTapped() {
         currentSearchType = .Albums
+        search(searchTextField)
     }
 
     @IBAction func songsButtonTapped() {
         currentSearchType = .Songs
+        search(searchTextField)
     }
 
 }
@@ -80,7 +83,11 @@ private extension SearchBar {
     }
 
     @IBAction func searchTextFieldChanged(sender: UITextField) {
-        guard let term = sender.text where term.characters.count > 2 else {
+        search(sender)
+    }
+
+    func search(textField: UITextField) {
+        guard let term = textField.text where term.characters.count > 2 else {
             return
         }
 
@@ -89,7 +96,6 @@ private extension SearchBar {
             return
         }
 
-        log.debug()
         searchDataSource.search(term, type: type)
     }
 

@@ -22,6 +22,7 @@ target 'Atlas' do
   pod 'RealmSwift', '= 1.0.2'
   pod 'Result', '= 2.1.3'
   pod 'ObjectMapper', '= 1.3.0'
+  pod 'PINRemoteImage', '= 2.1.4'
 
   target 'AtlasTests' do
     inherit! :search_paths

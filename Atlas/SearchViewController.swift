@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PINRemoteImage
 
 class SearchViewController: UIViewController {
 
@@ -50,10 +51,6 @@ class SearchViewController: UIViewController {
 
 }
 
-private extension SearchViewController {
-
-}
-
 extension SearchViewController: UITableViewDelegate {
 
     // swiftlint:disable:next line_length
@@ -62,7 +59,13 @@ extension SearchViewController: UITableViewDelegate {
             let result = dataSource.presentableSearchResults[indexPath.row]
             albumCell.titleLabel.text = result.title
             albumCell.subtitleLabel.text = result.subtitle
-            // TODO: Image
+
+            if let imageURL = NSURL(string: result.imageURL) {
+                albumCell.artImageView.pin_setImageFromURL(imageURL)
+            } else {
+                albumCell.artImageView.image = nil
+                // TODO: no-image asset
+            }
         }
     }
 }
