@@ -6,7 +6,7 @@ plugin 'cocoapods-keys', {
   ]}
 
 def core
-  pod 'Log'
+  pod 'Log', '= 0.5.0'
 end
 
 def test_pods
