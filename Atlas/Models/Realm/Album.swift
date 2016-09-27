@@ -11,7 +11,7 @@ import ObjectMapper
 
 class Album: Object, Mappable, Identifiable {
 
-    dynamic var id: String = ""
+    dynamic var id: Int = 0
 
     dynamic var artistId: String = ""
     dynamic var artistName: String = ""

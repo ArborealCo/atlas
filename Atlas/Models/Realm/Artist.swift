@@ -11,7 +11,7 @@ import ObjectMapper
 
 class Artist: Object, Mappable, Identifiable {
 
-    dynamic var id: String = ""
+    dynamic var id: Int = 0
 
     dynamic var genre: String = ""
     dynamic var iTunesURL: String = ""

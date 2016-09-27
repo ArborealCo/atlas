@@ -8,6 +8,7 @@
 
 import UIKit
 import PINRemoteImage
+import RealmSwift
 
 class SearchViewController: UIViewController {
 
@@ -55,7 +56,8 @@ extension SearchViewController: UITableViewDelegate {
 
     // swiftlint:disable:next line_length
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if let albumCell = cell as? SearchResultCell, let dataSource = tableView.dataSource as? SearchDataSource {
+        if let albumCell = cell as? SearchResultCell,
+            let dataSource = tableView.dataSource as? SearchDataSource {
             let result = dataSource.presentableSearchResults[indexPath.row]
             albumCell.titleLabel.text = result.title
             albumCell.subtitleLabel.text = result.subtitle
@@ -68,5 +70,47 @@ extension SearchViewController: UITableViewDelegate {
                 // TODO: no-image asset
             }
         }
+    }
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        guard let dataSource = tableView.dataSource as? SearchDataSource else {
+            return
+        }
+
+        let result = dataSource.presentableSearchResults[indexPath.row]
+
+        let realm = try! Realm()
+
+        let boardItem = BoardItem()
+        var itemShouldBeInserted = true
+        if let artist = result as? Artist {
+            boardItem.artist = artist
+            itemShouldBeInserted = realm
+                .objects(BoardItem)
+                .filter("artist.id == \(artist.id)")
+                .count == 0
+        } else if let album = result as? Album {
+            boardItem.album = album
+            itemShouldBeInserted = realm
+                .objects(BoardItem)
+                .filter("album.id == \(album.id)")
+                .count == 0
+        } else if let song = result as? Song {
+            boardItem.song = song
+            itemShouldBeInserted = realm
+                .objects(Song)
+                .filter("song.id == \(song.id)")
+                .count == 0
+        }
+
+        if itemShouldBeInserted {
+            try! realm.write {
+                realm.add(boardItem)
+            }
+
+            log.debug("added board item: \(boardItem)")
+        }
+
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }

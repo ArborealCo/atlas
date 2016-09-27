@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import RealmSwift
 
 class BoardDataSource: NSObject, UICollectionViewDataSource {
 
+    var boardItems: Results<BoardItem>?
+
+    override init() {
+        super.init()
+
+        let realm = try! Realm()
+        boardItems = realm.objects(BoardItem)
+    }
+
     // swiftlint:disable:next line_length
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return boardItems?.count ?? 0
     }
 
     // swiftlint:disable:next line_length

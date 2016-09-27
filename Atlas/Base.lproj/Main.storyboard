@@ -180,7 +180,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iZU-pl-dFu">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iZU-pl-dFu">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="f3h-ds-YwD">
@@ -190,15 +190,41 @@
                                     <inset key="sectionInset" minX="15" minY="15" maxX="15" maxY="15"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BoardItemCellIdentifier" id="nIE-Hf-LuS">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BoardItemCellIdentifier" id="nIE-Hf-LuS" customClass="BoardItemCollectionViewCell" customModule="Atlas" customModuleProvider="target">
                                         <rect key="frame" x="15" y="15" width="137" height="137"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="137" height="137"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opeth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXh-qT-Ye2">
+                                                    <rect key="frame" x="13" y="86" width="111" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMz-tv-AHe">
+                                                    <rect key="frame" x="13" y="108" width="111" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" red="0.64581799507141113" green="0.92754566669464111" blue="0.86278170347213745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="AMz-tv-AHe" firstAttribute="top" secondItem="FXh-qT-Ye2" secondAttribute="bottom" constant="1" id="0uT-Xd-X01"/>
+                                            <constraint firstItem="AMz-tv-AHe" firstAttribute="leading" secondItem="nIE-Hf-LuS" secondAttribute="leadingMargin" constant="5" id="R6V-uB-OY1"/>
+                                            <constraint firstItem="FXh-qT-Ye2" firstAttribute="leading" secondItem="nIE-Hf-LuS" secondAttribute="leadingMargin" constant="5" id="b3D-aN-J82"/>
+                                            <constraint firstItem="FXh-qT-Ye2" firstAttribute="top" secondItem="nIE-Hf-LuS" secondAttribute="topMargin" constant="78" id="ddr-gs-L23"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="FXh-qT-Ye2" secondAttribute="trailing" constant="5" id="grn-tM-aMY"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="AMz-tv-AHe" secondAttribute="trailing" constant="5" id="rb3-4S-8yK"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="subtitleLabel" destination="AMz-tv-AHe" id="MhA-iQ-1Qq"/>
+                                            <outlet property="titleLabel" destination="FXh-qT-Ye2" id="CNx-O3-XLa"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
