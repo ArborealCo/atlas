@@ -60,7 +60,8 @@ extension SearchViewController: UITableViewDelegate {
             albumCell.titleLabel.text = result.title
             albumCell.subtitleLabel.text = result.subtitle
 
-            if let imageURL = NSURL(string: result.imageURL) {
+            if let imageURL = NSURL(string: result.imageURL)
+                where result.imageURL.characters.count > 0 {
                 albumCell.artImageView.pin_setImageFromURL(imageURL)
             } else {
                 albumCell.artImageView.image = nil
